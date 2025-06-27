@@ -1,0 +1,14 @@
+name: Testing
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-external-workflow:
+    uses: DaviMacielCavalcante/empresa-pipelines/.github/workflows/template-teste.yaml@main
+  call-external-workflow-2:
+    uses: DaviMacielCavalcante/empresa-pipelines/.github/workflows/template-build.yaml@main
+    with:
+      image-tag: 'latest'
+      image-name: 'teste-image'
+    
